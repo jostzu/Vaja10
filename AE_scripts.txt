@@ -1,0 +1,11 @@
+value = Math.round(effect("Slider Control")("Slider")) --slider berz decimalk
+
+num = effect("Number")("Slider").value.toFixed();
+
+# doda vejice pri večjih št. preimenuj Slider fx v Numbers koda gre v source text, 
+# ne rabiš povezvt sliderja s pick whipom
+function addCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+addCommas(num)
